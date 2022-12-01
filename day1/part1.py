@@ -31,7 +31,7 @@ def main() -> int:
     data = parse_input(INPUT_DATA)
 
     print(data[0])
-    print(data[0] + data[1] + data[2])
+    print(sum(data[:3]))
 
 
     #print([6000, 4000, 11000, 24000, 10000].sort());
