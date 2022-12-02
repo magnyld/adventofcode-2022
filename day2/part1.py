@@ -47,6 +47,7 @@ def main() -> int:
     f = open(INPUT_FILE)
     INPUT_DATA = f.read();
 
+    #data = parse_input(INPUT_TEST_DATA)
     data = parse_input(INPUT_DATA)
 
     results = []
@@ -54,17 +55,6 @@ def main() -> int:
         results.append(calc_game(game))
         
     print(sum(results));
-    #data = parse_input(INPUT_DATA)
-
-    #print(data)
-    #print(sum(data[:3]))
-
-
-    #print([6000, 4000, 11000, 24000, 10000].sort());
-
-    #print([float(x) for x in INPUT_S_TEST.split()])
-    #print(sum([True,False]))
-    #print(sum([2,4]))
 
     return 0
 
