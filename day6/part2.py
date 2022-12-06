@@ -10,19 +10,13 @@ def parse_input(s):
     return [x for x in s.strip()]
 
 def calc(data):
-    count = 0
+
     look_ahead = 14
+    
     for i in range(len(data)):
-
-        if (count == look_ahead):
-            return i
-
-        count += 1
-        for x in range(1, look_ahead-(count-1)):
-            if(data[i] == data[i+x]):
-                count = 0
-
-    return count
+        if len(set(data[i:look_ahead+i])) == look_ahead:
+            return i+look_ahead;
+            
 
 def main() -> int:
 
